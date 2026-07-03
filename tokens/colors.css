@@ -1,0 +1,23 @@
+:root {
+  /* Base — near-black ground, warm off-white ink, single amber accent */
+  --bg:            #0a0a0a; /* page ground */
+  --surface:       #141311; /* lifted panel */
+  --surface-2:     #1b1a17; /* card / hover panel */
+  --fg:            #ECE8DF; /* primary ink (warm off-white) */
+  --fg-muted:      #8b867b; /* mono labels, secondary */
+  --fg-dim:        #6c675d; /* tertiary, footnotes */
+
+  --accent:        #EBA83A; /* the one accent — amber/gold */
+  --accent-ink:    #0a0a0a; /* text placed on top of accent */
+
+  --border:        rgba(236, 232, 223, 0.14); /* hairline dividers */
+  --border-strong: rgba(236, 232, 223, 0.28); /* node outlines, focus */
+  --line:          rgba(236, 232, 223, 0.40); /* network illustration strokes */
+
+  /* Semantic aliases */
+  --text-body:     var(--fg);
+  --text-label:    var(--fg-muted);
+  --text-dim:      var(--fg-dim);
+  --surface-card:  var(--surface-2);
+  --link:          var(--accent);
+}

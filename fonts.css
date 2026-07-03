@@ -1,0 +1,5 @@
+/* Webfonts. Space Grotesk (display) + Space Mono (labels/mono).
+   Both are Google Fonts and are also present in the Google Slides font
+   library, so decks/exports stay consistent. If you need self-hosted
+   binaries, replace this @import with local @font-face rules. */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");

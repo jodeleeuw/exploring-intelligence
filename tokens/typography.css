@@ -1,0 +1,29 @@
+:root {
+  /* Families */
+  --font-display: "Space Grotesk", system-ui, sans-serif; /* headings, the question */
+  --font-mono:    "Space Mono", ui-monospace, "SFMono-Regular", monospace; /* labels, meta, links */
+
+  /* Weights */
+  --fw-reg:  400;
+  --fw-med:  500;
+  --fw-semi: 600;
+  --fw-bold: 700;
+
+  /* Display / heading scale (fluid, back-of-room friendly) */
+  --text-hero: clamp(52px, 8.5vw, 128px); /* the framing question */
+  --text-h1:   clamp(36px, 5vw, 60px);
+  --text-h2:   clamp(26px, 3.2vw, 38px);
+  --text-h3:   22px;
+
+  /* Body + labels */
+  --text-lead:  clamp(20px, 2.1vw, 26px);
+  --text-body:  18px;
+  --text-small: 15px;
+  --text-label: 14px; /* mono, uppercase */
+
+  /* Tracking */
+  --tracking-label: 0.22em; /* mono uppercase labels */
+  --tracking-tight: -0.03em; /* large display */
+  --leading-tight:  0.98;
+  --leading-body:   1.55;
+}
