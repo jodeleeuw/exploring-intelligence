@@ -7,121 +7,113 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="styles.css">
-<style>
-  html { scroll-behavior: smooth; }
-  body { margin: 0; }
-  ::selection { background: #EBA83A; color: #0a0a0a; }
-  .hv-fg:hover { color: var(--fg) !important; }
-  .hv-accent:hover { color: var(--accent) !important; }
-  .hv-underline:hover { text-decoration: underline !important; }
-</style>
 </head>
 <body>
 
-<div style="background:var(--bg);color:var(--fg);font-family:var(--font-display);min-height:100vh;">
+<div class="site-wrap">
 
   <!-- NAV -->
-  <header style="position:sticky;top:0;z-index:20;background:rgba(10,10,10,0.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);">
-    <nav style="max-width:var(--maxw);margin:0 auto;padding:20px var(--gutter);display:flex;justify-content:space-between;align-items:center;gap:24px;">
-      <a href="#top" style="font-family:var(--font-mono);font-size:14px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-muted);text-decoration:none;">Exploring <span style="color:var(--accent);">(Artificial)</span> Intelligence</a>
-      <div style="display:flex;gap:28px;align-items:center;font-family:var(--font-mono);font-size:13px;letter-spacing:0.14em;text-transform:uppercase;">
-        <a href="#overview" style="color:var(--fg-muted);text-decoration:none;" class="hv-fg">Overview</a>
-        <a href="#schedule" style="color:var(--fg-muted);text-decoration:none;" class="hv-fg">Schedule</a>
-        <a href="#resources" style="color:var(--fg-muted);text-decoration:none;" class="hv-fg">Resources</a>
-        <a href="#details" style="color:var(--fg-muted);text-decoration:none;" class="hv-fg">Details</a>
+  <header class="site-header">
+    <nav class="site-nav">
+      <a href="#top" class="nav-brand">Exploring <span class="accent">(Artificial)</span> Intelligence</a>
+      <div class="nav-links">
+        <a href="#overview" class="nav-link hv-fg">Overview</a>
+        <a href="#schedule" class="nav-link hv-fg">Schedule</a>
+        <a href="#resources" class="nav-link hv-fg">Resources</a>
+        <a href="#details" class="nav-link hv-fg">Details</a>
       </div>
     </nav>
   </header>
 
   <!-- HERO -->
-  <section id="top" style="position:relative;overflow:hidden;">
-    <div style="max-width:var(--maxw);margin:0 auto;padding:clamp(80px,12vh,150px) var(--gutter) 220px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:34px;">
-      <div style="font-family:var(--font-mono);font-size:var(--text-label);letter-spacing:0.4em;text-transform:uppercase;color:var(--accent);">A One-Week Summer Course</div>
-      <h1 style="margin:0;font-weight:400;font-size:var(--text-hero);line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);"><span style="display:block;">Exploring</span><span style="display:block;color:var(--accent);">(Artificial)</span><span style="display:block;">Intelligence</span></h1>
-      <div style="font-family:var(--font-mono);font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:var(--fg-muted);">Vassar Pre-College · Summer 2026 · Dr. Elena Márquez</div>
+  <section id="top" class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">A One-Week Summer Course</div>
+      <h1 class="hero-title"><span>Exploring</span><span class="accent">(Artificial)</span><span>Intelligence</span></h1>
+      <div class="hero-meta">Vassar Pre-College · Summer 2026 · Dr. Elena Márquez</div>
     </div>
-    <img src="assets/network.png" alt="Node network" style="position:absolute;left:0;bottom:0;width:100%;height:190px;object-fit:cover;object-position:center bottom;pointer-events:none;">
+    <img src="assets/network.png" alt="Node network" class="hero-img">
   </section>
 
   <!-- OVERVIEW -->
-  <section id="overview" style="scroll-margin-top:88px;border-top:1px solid var(--border);">
-    <div style="max-width:var(--maxw);margin:0 auto;padding:var(--space-8) var(--gutter);display:grid;grid-template-columns:220px 1fr;gap:var(--space-6);">
-      <div style="font-family:var(--font-mono);font-size:var(--text-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--fg-muted);">Overview</div>
+  <section id="overview" class="section">
+    <div class="section-inner section-inner--sidebar">
+      <div class="section-label">Overview</div>
       <div>
-        <p style="margin:0;font-size:var(--text-lead);line-height:1.5;color:var(--fg);max-width:720px;">Five days, five questions. We treat intelligence — human and artificial — as a single problem seen from many sides: philosophy of mind, cognitive science, and the machine-learning systems now sitting at the center of the conversation.</p>
-        <p style="margin:24px 0 0;font-size:var(--text-body);line-height:var(--leading-body);color:var(--fg-muted);max-width:720px;">No prior background is assumed. Each morning opens with a framing question and closes with a discussion; afternoons are hands-on. Expect to read closely, argue carefully, and build small things.</p>
+        <p class="overview-lead">Five days, five questions. We treat intelligence — human and artificial — as a single problem seen from many sides: philosophy of mind, cognitive science, and the machine-learning systems now sitting at the center of the conversation.</p>
+        <p class="overview-body">No prior background is assumed. Each morning opens with a framing question and closes with a discussion; afternoons are hands-on. Expect to read closely, argue carefully, and build small things.</p>
       </div>
     </div>
   </section>
 
   <!-- SCHEDULE -->
-  <section id="schedule" style="scroll-margin-top:88px;border-top:1px solid var(--border);">
-    <div style="max-width:var(--maxw);margin:0 auto;padding:var(--space-8) var(--gutter);">
-      <div style="font-family:var(--font-mono);font-size:var(--text-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--fg-muted);margin-bottom:var(--space-6);">The Week</div>
+  <section id="schedule" class="section">
+    <div class="section-inner">
+      <div class="section-label schedule-header">The Week</div>
 
-      <div style="display:flex;align-items:baseline;gap:clamp(24px,5vw,72px);padding:var(--space-5) 0;border-top:1px solid var(--border);">
-        <div style="font-family:var(--font-mono);font-size:16px;letter-spacing:0.14em;color:var(--accent);width:96px;flex:none;">Day 01</div>
-        <div style="flex:1;">
-          <h3 style="margin:0;font-weight:400;font-size:var(--text-h2);letter-spacing:-0.02em;">What is a mind<span style="color:var(--accent);">?</span></h3>
-          <p style="margin:12px 0 0;font-size:var(--text-body);line-height:1.5;color:var(--fg-muted);max-width:640px;">Consciousness, intentionality, and the hard problem. What we mean when we say something "thinks."</p>
-          <div style="margin-top:22px;">
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Reading</span><span style="font-size:17px;line-height:1.35;">Nagel — What Is It Like to Be a Bat?</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Reading</span><span style="font-size:17px;line-height:1.35;">Chalmers — Facing Up to the Problem of Consciousness</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Discuss</span><span style="font-size:17px;line-height:1.35;">Day 01 discussion prompts</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Slides</span><span style="font-size:17px;line-height:1.35;">Day 01 — Minds &amp; the hard problem</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
+      <div class="schedule-row">
+        <div class="day-label">Day 01</div>
+        <div class="day-content">
+          <h3 class="day-heading">What is a mind<span class="accent">?</span></h3>
+          <p class="day-desc">Consciousness, intentionality, and the hard problem. What we mean when we say something "thinks."</p>
+          <div class="day-items">
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Reading</span><span class="day-item__title">Nagel — What Is It Like to Be a Bat?</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Reading</span><span class="day-item__title">Chalmers — Facing Up to the Problem of Consciousness</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Discuss</span><span class="day-item__title">Day 01 discussion prompts</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Slides</span><span class="day-item__title">Day 01 — Minds &amp; the hard problem</span><span class="day-item__arrow">↗</span></a>
           </div>
         </div>
       </div>
 
-      <div style="display:flex;align-items:baseline;gap:clamp(24px,5vw,72px);padding:var(--space-5) 0;border-top:1px solid var(--border);">
-        <div style="font-family:var(--font-mono);font-size:16px;letter-spacing:0.14em;color:var(--accent);width:96px;flex:none;">Day 02</div>
-        <div style="flex:1;">
-          <h3 style="margin:0;font-weight:400;font-size:var(--text-h2);letter-spacing:-0.02em;">Can machines think<span style="color:var(--accent);">?</span></h3>
-          <p style="margin:12px 0 0;font-size:var(--text-body);line-height:1.5;color:var(--fg-muted);max-width:640px;">Turing's test, the Chinese Room, and what today's language models do and don't settle.</p>
-          <div style="margin-top:22px;">
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Reading</span><span style="font-size:17px;line-height:1.35;">Turing — Computing Machinery and Intelligence</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Reading</span><span style="font-size:17px;line-height:1.35;">Searle — Minds, Brains, and Programs</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Lab</span><span style="font-size:17px;line-height:1.35;">Prompt the model: probing an LLM</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Slides</span><span style="font-size:17px;line-height:1.35;">Day 02 — The imitation game</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
+      <div class="schedule-row">
+        <div class="day-label">Day 02</div>
+        <div class="day-content">
+          <h3 class="day-heading">Can machines think<span class="accent">?</span></h3>
+          <p class="day-desc">Turing's test, the Chinese Room, and what today's language models do and don't settle.</p>
+          <div class="day-items">
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Reading</span><span class="day-item__title">Turing — Computing Machinery and Intelligence</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Reading</span><span class="day-item__title">Searle — Minds, Brains, and Programs</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Lab</span><span class="day-item__title">Prompt the model: probing an LLM</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Slides</span><span class="day-item__title">Day 02 — The imitation game</span><span class="day-item__arrow">↗</span></a>
           </div>
         </div>
       </div>
 
-      <div style="display:flex;align-items:baseline;gap:clamp(24px,5vw,72px);padding:var(--space-5) 0;border-top:1px solid var(--border);">
-        <div style="font-family:var(--font-mono);font-size:16px;letter-spacing:0.14em;color:var(--accent);width:96px;flex:none;">Day 03</div>
-        <div style="flex:1;">
-          <h3 style="margin:0;font-weight:400;font-size:var(--text-h2);letter-spacing:-0.02em;">What is learning<span style="color:var(--accent);">?</span></h3>
-          <p style="margin:12px 0 0;font-size:var(--text-body);line-height:1.5;color:var(--fg-muted);max-width:640px;">From reflexes to gradient descent. How brains and networks change with experience — and where the analogy breaks.</p>
-          <div style="margin-top:22px;">
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Reading</span><span style="font-size:17px;line-height:1.35;">Rumelhart et al. — Learning representations by back-propagating errors</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Lab</span><span style="font-size:17px;line-height:1.35;">Train a neural net (Colab)</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Slides</span><span style="font-size:17px;line-height:1.35;">Day 03 — From reflexes to gradient descent</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
+      <div class="schedule-row">
+        <div class="day-label">Day 03</div>
+        <div class="day-content">
+          <h3 class="day-heading">What is learning<span class="accent">?</span></h3>
+          <p class="day-desc">From reflexes to gradient descent. How brains and networks change with experience — and where the analogy breaks.</p>
+          <div class="day-items">
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Reading</span><span class="day-item__title">Rumelhart et al. — Learning representations by back-propagating errors</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Lab</span><span class="day-item__title">Train a neural net (Colab)</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Slides</span><span class="day-item__title">Day 03 — From reflexes to gradient descent</span><span class="day-item__arrow">↗</span></a>
           </div>
         </div>
       </div>
 
-      <div style="display:flex;align-items:baseline;gap:clamp(24px,5vw,72px);padding:var(--space-5) 0;border-top:1px solid var(--border);">
-        <div style="font-family:var(--font-mono);font-size:16px;letter-spacing:0.14em;color:var(--accent);width:96px;flex:none;">Day 04</div>
-        <div style="flex:1;">
-          <h3 style="margin:0;font-weight:400;font-size:var(--text-h2);letter-spacing:-0.02em;">Who is responsible<span style="color:var(--accent);">?</span></h3>
-          <p style="margin:12px 0 0;font-size:var(--text-body);line-height:1.5;color:var(--fg-muted);max-width:640px;">Agency, bias, and accountability when decisions are delegated to systems we only partly understand.</p>
-          <div style="margin-top:22px;">
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Reading</span><span style="font-size:17px;line-height:1.35;">Gebru et al. — Datasheets for Datasets</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Case</span><span style="font-size:17px;line-height:1.35;">When an algorithm decides: a case study</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Slides</span><span style="font-size:17px;line-height:1.35;">Day 04 — Agency &amp; accountability</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
+      <div class="schedule-row">
+        <div class="day-label">Day 04</div>
+        <div class="day-content">
+          <h3 class="day-heading">Who is responsible<span class="accent">?</span></h3>
+          <p class="day-desc">Agency, bias, and accountability when decisions are delegated to systems we only partly understand.</p>
+          <div class="day-items">
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Reading</span><span class="day-item__title">Gebru et al. — Datasheets for Datasets</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Case</span><span class="day-item__title">When an algorithm decides: a case study</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Slides</span><span class="day-item__title">Day 04 — Agency &amp; accountability</span><span class="day-item__arrow">↗</span></a>
           </div>
         </div>
       </div>
 
-      <div style="display:flex;align-items:baseline;gap:clamp(24px,5vw,72px);padding:var(--space-5) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-        <div style="font-family:var(--font-mono);font-size:16px;letter-spacing:0.14em;color:var(--accent);width:96px;flex:none;">Day 05</div>
-        <div style="flex:1;">
-          <h3 style="margin:0;font-weight:400;font-size:var(--text-h2);letter-spacing:-0.02em;">What comes next<span style="color:var(--accent);">?</span></h3>
-          <p style="margin:12px 0 0;font-size:var(--text-body);line-height:1.5;color:var(--fg-muted);max-width:640px;">Where the field is heading, and how to keep thinking clearly about claims that outpace the evidence. Final projects.</p>
-          <div style="margin-top:22px;">
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Reading</span><span style="font-size:17px;line-height:1.35;">Bender et al. — On the Dangers of Stochastic Parrots</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Brief</span><span style="font-size:17px;line-height:1.35;">Final project guidelines</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
-            <a href="#" style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent"><span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);width:74px;flex:none;">Slides</span><span style="font-size:17px;line-height:1.35;">Day 05 — Thinking clearly about claims</span><span style="margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--fg-dim);">↗</span></a>
+      <div class="schedule-row schedule-row--last">
+        <div class="day-label">Day 05</div>
+        <div class="day-content">
+          <h3 class="day-heading">What comes next<span class="accent">?</span></h3>
+          <p class="day-desc">Where the field is heading, and how to keep thinking clearly about claims that outpace the evidence. Final projects.</p>
+          <div class="day-items">
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Reading</span><span class="day-item__title">Bender et al. — On the Dangers of Stochastic Parrots</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Brief</span><span class="day-item__title">Final project guidelines</span><span class="day-item__arrow">↗</span></a>
+            <a href="#" class="day-item hv-accent"><span class="day-item__type">Slides</span><span class="day-item__title">Day 05 — Thinking clearly about claims</span><span class="day-item__arrow">↗</span></a>
           </div>
         </div>
       </div>
@@ -129,74 +121,74 @@
   </section>
 
   <!-- RESOURCES -->
-  <section id="resources" style="scroll-margin-top:88px;border-top:1px solid var(--border);background:var(--surface);">
-    <div style="max-width:var(--maxw);margin:0 auto;padding:var(--space-8) var(--gutter);">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;margin-bottom:var(--space-6);">
-        <div style="font-family:var(--font-mono);font-size:var(--text-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--fg-muted);">Resources</div>
-        <div style="font-family:var(--font-mono);font-size:13px;letter-spacing:0.06em;color:var(--fg-dim);">Replace links before the course begins</div>
+  <section id="resources" class="section section--surface">
+    <div class="section-inner">
+      <div class="resources-header">
+        <div class="section-label">Resources</div>
+        <div class="resources-note">Replace links before the course begins</div>
       </div>
 
       <!-- Readings -->
-      <div style="font-family:var(--font-mono);font-size:13px;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);margin:0 0 8px;">Readings</div>
-      <a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent">
-        <span style="font-size:var(--text-h3);font-weight:400;">Turing — Computing Machinery and Intelligence</span>
-        <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:0.1em;color:var(--fg-dim);white-space:nowrap;">PDF ↗</span>
+      <div class="resource-group-label">Readings</div>
+      <a href="#" class="resource-row hv-accent">
+        <span class="resource-title">Turing — Computing Machinery and Intelligence</span>
+        <span class="resource-meta">PDF ↗</span>
       </a>
-      <a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent">
-        <span style="font-size:var(--text-h3);font-weight:400;">Nagel — What Is It Like to Be a Bat?</span>
-        <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:0.1em;color:var(--fg-dim);white-space:nowrap;">PDF ↗</span>
+      <a href="#" class="resource-row hv-accent">
+        <span class="resource-title">Nagel — What Is It Like to Be a Bat?</span>
+        <span class="resource-meta">PDF ↗</span>
       </a>
-      <a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent">
-        <span style="font-size:var(--text-h3);font-weight:400;">Dennett — selections from Consciousness Explained</span>
-        <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:0.1em;color:var(--fg-dim);white-space:nowrap;">PDF ↗</span>
+      <a href="#" class="resource-row resource-row--last hv-accent">
+        <span class="resource-title">Dennett — selections from Consciousness Explained</span>
+        <span class="resource-meta">PDF ↗</span>
       </a>
 
       <!-- Tools -->
-      <div style="font-family:var(--font-mono);font-size:13px;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);margin:var(--space-6) 0 8px;">Tools &amp; Demos</div>
-      <a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent">
-        <span style="font-size:var(--text-h3);font-weight:400;">Course notebook</span>
-        <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:0.1em;color:var(--fg-dim);white-space:nowrap;">Colab ↗</span>
+      <div class="resource-group-label resource-group-label--spaced">Tools &amp; Demos</div>
+      <a href="#" class="resource-row hv-accent">
+        <span class="resource-title">Course notebook</span>
+        <span class="resource-meta">Colab ↗</span>
       </a>
-      <a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;border-top:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent">
-        <span style="font-size:var(--text-h3);font-weight:400;">Neural network playground</span>
-        <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:0.1em;color:var(--fg-dim);white-space:nowrap;">Demo ↗</span>
+      <a href="#" class="resource-row hv-accent">
+        <span class="resource-title">Neural network playground</span>
+        <span class="resource-meta">Demo ↗</span>
       </a>
-      <a href="#" style="display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-decoration:none;color:var(--fg);transition:color 150ms ease;" class="hv-accent">
-        <span style="font-size:var(--text-h3);font-weight:400;">Discussion board</span>
-        <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:0.1em;color:var(--fg-dim);white-space:nowrap;">Forum ↗</span>
+      <a href="#" class="resource-row resource-row--last hv-accent">
+        <span class="resource-title">Discussion board</span>
+        <span class="resource-meta">Forum ↗</span>
       </a>
     </div>
   </section>
 
   <!-- DETAILS -->
-  <section id="details" style="scroll-margin-top:88px;border-top:1px solid var(--border);">
-    <div style="max-width:var(--maxw);margin:0 auto;padding:var(--space-8) var(--gutter);display:grid;grid-template-columns:220px 1fr;gap:var(--space-6);">
-      <div style="font-family:var(--font-mono);font-size:var(--text-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--fg-muted);">Details</div>
-      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5) var(--space-6);max-width:720px;">
+  <section id="details" class="section">
+    <div class="section-inner section-inner--sidebar">
+      <div class="section-label">Details</div>
+      <div class="details-grid">
         <div>
-          <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--fg-dim);margin-bottom:8px;">When</div>
-          <div style="font-size:var(--text-body);color:var(--fg);">July 6-10, 2026</div>
+          <div class="detail-label">When</div>
+          <div class="detail-value">July 6-10, 2026</div>
         </div>
         <div>
-          <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--fg-dim);margin-bottom:8px;">Where</div>
-          <div style="font-size:var(--text-body);color:var(--fg);">Vassar College, Poughkeepsie NY</div>
+          <div class="detail-label">Where</div>
+          <div class="detail-value">Vassar College, Poughkeepsie NY</div>
         </div>
         <div>
-          <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--fg-dim);margin-bottom:8px;">Instructor</div>
-          <div style="font-size:var(--text-body);color:var(--fg);">Prof. Josh de Leeuw</div>
+          <div class="detail-label">Instructor</div>
+          <div class="detail-value">Prof. Josh de Leeuw</div>
         </div>
         <div>
-          <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--fg-dim);margin-bottom:8px;">Contact</div>
-          <a href="#" style="font-size:var(--text-body);color:var(--accent);text-decoration:none;" class="hv-underline">jdeleeuw@vassar.edu</a>
+          <div class="detail-label">Contact</div>
+          <a href="#" class="detail-link hv-underline">jdeleeuw@vassar.edu</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer style="border-top:1px solid var(--border);">
-    <div style="max-width:var(--maxw);margin:0 auto;padding:var(--space-6) var(--gutter);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-family:var(--font-mono);font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--fg-dim);">
-      <span>Exploring <span style="color:var(--accent);">(Artificial)</span> Intelligence</span>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Exploring <span class="accent">(Artificial)</span> Intelligence</span>
       <span>Vassar Pre-College · 2026</span>
     </div>
   </footer>
