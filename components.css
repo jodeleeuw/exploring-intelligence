@@ -20,6 +20,7 @@ body { margin: 0; }
   color: var(--fg);
   font-family: var(--font-display);
   min-height: 100vh;
+  overflow-x: clip; /* contain any incidental overflow without breaking sticky nav */
 }
 
 /* ---- Nav ---- */
@@ -341,4 +342,55 @@ body { margin: 0; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--fg-dim);
+}
+
+/* ---- Responsive / mobile ---- */
+
+/* Tablet: relax the sidebar layouts before they get cramped */
+@media (max-width: 820px) {
+  .section-inner--sidebar {
+    grid-template-columns: 160px 1fr;
+    gap: var(--space-4);
+  }
+}
+
+/* Phones */
+@media (max-width: 640px) {
+  /* Nav stacks; long brand is free to wrap instead of overflowing */
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px var(--gutter);
+  }
+  .nav-brand { font-size: 12px; }
+  .nav-links { gap: 20px; font-size: 12px; }
+
+  /* Hero title: drop the 52px floor so long words never overflow */
+  .hero-title { font-size: clamp(34px, 11vw, 58px); }
+  .hero-meta  { font-size: 13px; letter-spacing: 0.14em; }
+
+  /* Sidebar layouts (Overview, Details) collapse to a single column */
+  .section-inner--sidebar {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  /* Schedule: the day label sits above its content instead of beside it */
+  .schedule-row {
+    flex-direction: column;
+    gap: 14px;
+    padding: var(--space-4) 0;
+  }
+  .day-label { width: auto; }
+
+  /* A touch less vertical air between major sections */
+  .section-inner { padding: var(--space-6) var(--gutter); }
+}
+
+/* Narrow phones: details to a single column */
+@media (max-width: 420px) {
+  .details-grid { grid-template-columns: 1fr; }
+  .day-item { gap: 12px; }
+  .day-item__type { width: 60px; }
 }
